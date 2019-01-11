@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name" translatable="false">Food Boxs</string>
 
-    <!--<string name="link" translatable="false">https://app.foodboxs.com/</string>-->
-    <string name="link" translatable="false">http://192.168.1.10/foodboxs/</string>
+    <string name="link" translatable="false">https://app.foodboxs.com/</string>
+    <!--<string name="link" translatable="false">http://192.168.1.10/foodboxs/</string>-->
 
     <string name="facebook_app_id" translatable="false">1635079836560465</string>
 
