@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.FoodBoxs.android">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.FoodBoxs.android.activity.Home"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name="com.FoodBoxs.android.activity.DetailPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.FoodBoxs.android.activity.CompleteOrder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.FoodBoxs.android.activity.PlaceOrderInfo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- Facebook setting for share -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1635079836560465"
+            android:exported="false" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.FoodBoxs.android.activity.Favourite"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.FoodBoxs.android.activity.BookOrder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.FoodBoxs.android.activity.OrderDetail"
+            android:screenOrientation="portrait" />
+
+        <!-- setting of firebase -->
+
+        <activity
+            android:name="com.FoodBoxs.android.activity.deliveryBoySection.LoginAsDelivery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.FoodBoxs.android.activity.deliveryBoySection.DeliveryBoyHome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.FoodBoxs.android.activity.deliveryBoySection.DeliveryBoyProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.FoodBoxs.android.activity.deliveryBoySection.DeliveryBoyHistory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.FoodBoxs.android.activity.AboutUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.FoodBoxs.android.activity.OurPolicy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.FoodBoxs.android.activity.deliveryBoySection.DeliveryBoyOrderDetail"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.FoodBoxs.android.firebase.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.FoodBoxs.android.activity.Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
